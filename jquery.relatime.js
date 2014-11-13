@@ -12,6 +12,7 @@
 		var setting = $.extend({
 			printTitle: false,
 			multiFormat:false,
+			maxYear: 5,
 			string: {
 				postfix: ' ago ',
 				second: ' second ',
@@ -45,7 +46,7 @@
 			};
 			var str = "";
 			var add = "";
-			if(rel.year > 5){
+			if(rel.year > setting.maxYear){
 				str += setting.string.more;
 			}else if(rel.year >= 1){
 				if(setting.multiFormat){
